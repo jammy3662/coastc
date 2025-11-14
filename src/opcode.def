@@ -1,0 +1,84 @@
+// NOTE: this implementation just copies
+// the c operator precedence rules
+// https://en.cppreference.com/w/c/language/operator_precedence
+
+INVALID = -1,
+
+LITERAL, // handwritten / constant value
+VARIABLE, // object / variable access
+META, // sizeof, nameof, countof
+GROUP, // () parentheses group of expression(s)
+LIST, // [] sequential expressions in an array
+RANGE, // 1..9 numbers within a range (inclusive)
+CAST, // int 4.0 cast value to type
+
+PAIR,
+// 2n
+// add (1,2)
+// "Hello World!" "\n" 
+
+POST_INCREMENT /* ++ */,
+POST_DECREMENT /* -- */,
+CALL /* () */,
+INDEX /* [] */,
+ACCESS /* -> */,
+
+PRE_INCREMENT /* ++ */,
+PRE_DECREMENT /* -- */,
+POSITIVE /* + */,
+NEGATIVE /* - */,
+NOT /* ! */,
+COMPLEMENT /* ~ */,
+DEREFERENCE, // * A,
+ADDRESS, // &
+SIZEOF, TYPEOF, COUNTOF /* arrays only */, NAMEOF,
+FIELDSOF,  // TODO: split this into more useful specializations, like localsof, defsof, enumsof, etc
+
+MULTIPLY, // *
+DIVIDE, // /
+MODULO, // %
+MOD = MODULO,
+
+PLUS, // +
+MINUS, // -
+
+SHIFT_LEFT, // <<
+SHIFT_RIGHT, // >>
+ROTATE_LEFT, // <<<
+ROTATE_RIGHT, // >>>
+
+LESS, // <
+MORE, // >
+LESS_OR_EQUAL, // <=
+MORE_OR_EQUAL, // >=
+AT_MOST = LESS_OR_EQUAL,
+AT_LEAST = MORE_OR_EQUAL,
+
+EQUALS, // ==
+INEQUAL, // !=
+
+AND, // &
+XOR, // ^
+OR, // |
+
+BOTH, // &&
+EITHER, // ||
+
+TERNARY, // ?:
+
+ASSIGN, // =
+ASSIGN_PLUS = ASSIGN + PLUS, // +=
+ASSIGN_MINUS = ASSIGN + MINUS, // -=
+ASSIGN_MULTIPLY = ASSIGN + MULTIPLY, // *=
+ASSIGN_DIVIDE = ASSIGN + DIVIDE, // /=
+ASSIGN_MODULO = ASSIGN + MODULO, // %=
+ASSIGN_MOD = ASSIGN_MODULO, // %=
+ASSIGN_SHIFT_LEFT = ASSIGN + SHIFT_LEFT, // <<=
+ASSIGN_SHIFT_RIGHT = ASSIGN + SHIFT_RIGHT, // >>=
+ASSIGN_ROTATE_LEFT = ASSIGN + ROTATE_LEFT, // <<<=
+ASSIGN_ROTATE_RIGHT = ASSIGN + ROTATE_RIGHT, // >>>=
+ASSIGN_AND = ASSIGN + AND, // &=
+ASSIGN_XOR = ASSIGN + XOR, // ^=
+ASSIGN_OR = ASSIGN + OR, // |=
+
+COMMA, APPEND = COMMA // ,

@@ -1,0 +1,803 @@
+Okay...
+Opened input file.
+Opened ANTLR input stream.
+(block 
+        (statement 
+            (line include 
+                (label io))) 
+        (statement 
+            (line include 
+                (label io . stream))) 
+        (statement 
+            (line include 
+                (label string))) 
+        (statement 
+            (line include 
+                (label optional))) 
+        (statement 
+            (line include 
+                (label ints))) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype let)) 
+                    (instances 
+                        (instance 
+                            (label PROGRAM_NAME) 
+                            (initializer = 
+                                (expression 
+                                    (atomic 
+                                        (value 
+                                            (literal "autocatc")))))))) ;)) 
+        (statement line) 
+        (statement 
+            (line int)) 
+        (statement 
+            (line ()) 
+        (statement 
+            (line float ,)) 
+        (statement line) 
+        (statement 
+            (line int ))) 
+        (statement 
+            (line 
+                (expression 
+                    (expression 
+                        (prefix *) 
+                        (expression 
+                            (atomic 
+                                (value 
+                                    (label test))))) 
+                    (infix =) 
+                    (expression 
+                        (atomic 
+                            (value 
+                                (label test_scanner))))) ;)) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (label std . ifstream))) 
+                    (instances 
+                        (instance 
+                            (label in)))) ;)) 
+        (statement 
+            (line 
+                (function 
+                    (type 
+                        (datatype 
+                            (builtin int))) 
+                    (label main) 
+                    (tuple ( 
+                        (parameters 
+                            (variable 
+                                (type 
+                                    (datatype 
+                                        (builtin int))) 
+                                (instance 
+                                    (label argc))) , 
+                            (variable 
+                                (type 
+                                    (datatype 
+                                        (builtin char)) 
+                                    (pointer *) 
+                                    (pointer *)) 
+                                (instance 
+                                    (label argv)))) )) 
+                    (scope 
+                        (block 
+                            (statement 
+                                (line 
+                                    (module enum 
+                                        (label Arg) 
+                                        (enum_scope { 
+                                            (instances 
+                                                (instance 
+                                                    (label FILE)) , 
+                                                (instance 
+                                                    (label FLAG))) })))) 
+                            (statement 
+                                (line ;)) 
+                            (statement 
+                                (line 
+                                    (variables 
+                                        (type 
+                                            (datatype 
+                                                (label Arg))) 
+                                        (instances 
+                                            (instance 
+                                                (label inputs) [ 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (label argc)))) ]))) ;)) 
+                            (statement for iterator 
+                                (scope 
+                                    (block 
+                                        (statement 
+                                            (line ()) 
+                                        (statement 
+                                            (line int =)) 
+                                        (statement 
+                                            (line 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (literal 0)))) ;))) <)) 
+                            (statement 
+                                (line 
+                                    (expression 
+                                        (atomic 
+                                            (value 
+                                                (label argc)))) ;)) 
+                            (statement 
+                                (line 
+                                    (expression 
+                                        (prefix ++) 
+                                        (expression ) :)))) 
+                            (statement if 
+                                (expression 
+                                    (expression 
+                                        (expression 
+                                            (atomic ( 
+                                                (expression 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label zero)))) 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label strcmp))))) 
+                                                    (expression 
+                                                        (atomic ( 
+                                                            (expression 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label argv)))) 
+                                                                    (expression 
+                                                                        (atomic [ ]))) , 
+                                                                (expression 
+                                                                    (atomic 
+                                                                        (value 
+                                                                            (literal "--help"))))) )))) ))) 
+                                        (expression 
+                                            (atomic 
+                                                (value 
+                                                    (label printf))))) 
+                                    (expression 
+                                        (atomic ( 
+                                            (expression 
+                                                (expression 
+                                                    (expression 
+                                                        (atomic 
+                                                            (value 
+                                                                (label PROGRAM_NAME)))) 
+                                                    (expression 
+                                                        (atomic 
+                                                            (value 
+                                                                (literal " [--help | SRC_FILE1 SRC_FILE2 ...]\n"))))) 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (literal "SRC_FILE defaults to standard input\n"))))) )))) 
+                                (scope 
+                                    (block 
+                                        (statement 
+                                            (line ;)) 
+                                        (statement return 
+                                            (expression 
+                                                (atomic 
+                                                    (value 
+                                                        (literal 0)))) ;)) ...) else 
+                                (scope 
+                                    (block 
+                                        (statement if 
+                                            (expression 
+                                                (expression 
+                                                    (expression 
+                                                        (atomic ( 
+                                                            (expression 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label zero)))) 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label strcmp))))) 
+                                                                (expression 
+                                                                    (atomic ( 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label argv)))) 
+                                                                                (expression 
+                                                                                    (atomic [ ]))) , 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (literal "scan"))))) )))) ))) 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label test)))) 
+                                                        (infix =) 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label test_scanner)))))) , 
+                                                (expression 
+                                                    (expression 
+                                                        (atomic 
+                                                            (value 
+                                                                (label inputs)))) 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic [ ])) 
+                                                        (infix =) 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label FLAG))))))) 
+                                            (scope 
+                                                (block 
+                                                    (statement 
+                                                        (line ;))) ...) else 
+                                            (scope 
+                                                (block 
+                                                    (statement if 
+                                                        (expression 
+                                                            (expression 
+                                                                (expression 
+                                                                    (atomic ( 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label zero)))) 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label strcmp))))) 
+                                                                            (expression 
+                                                                                (atomic ( 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (expression 
+                                                                                                (atomic 
+                                                                                                    (value 
+                                                                                                        (label argv)))) 
+                                                                                            (expression 
+                                                                                                (atomic [ ]))) , 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (literal "parse"))))) )))) ))) 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label test)))) 
+                                                                    (infix =) 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label test_parser)))))) , 
+                                                            (expression 
+                                                                (expression 
+                                                                    (atomic 
+                                                                        (value 
+                                                                            (label inputs)))) 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic [ ])) 
+                                                                    (infix =) 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label FLAG))))))) 
+                                                        (scope 
+                                                            (block 
+                                                                (statement 
+                                                                    (line ;))) ...) else 
+                                                        (scope 
+                                                            (block 
+                                                                (statement 
+                                                                    (line 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (label inputs)))) 
+                                                                            (expression 
+                                                                                (expression 
+                                                                                    (atomic [ ])) 
+                                                                                (infix =) 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label FILE)))))) ;))) ...)) 
+                                                    (statement 
+                                                        (line 
+                                                            (variables 
+                                                                (type 
+                                                                    (datatype 
+                                                                        (label bool))) 
+                                                                (instances 
+                                                                    (instance 
+                                                                        (label files_input) 
+                                                                        (initializer = 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (label false)))))))) ;)) 
+                                                    (statement if 
+                                                        (expression 
+                                                            (atomic ( 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label argc)))) 
+                                                                    (infix >) 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (literal 1))))) ))) 
+                                                        (scope 
+                                                            (block 
+                                                                (statement for iterator 
+                                                                    (scope 
+                                                                        (block 
+                                                                            (statement 
+                                                                                (line ()) 
+                                                                            (statement 
+                                                                                (line int =)) 
+                                                                            (statement 
+                                                                                (line 
+                                                                                    (expression 
+                                                                                        (atomic 
+                                                                                            (value 
+                                                                                                (literal 1)))) ;))) <)) 
+                                                                (statement 
+                                                                    (line 
+                                                                        (expression 
+                                                                            (atomic 
+                                                                                (value 
+                                                                                    (label argc)))) ;)) 
+                                                                (statement 
+                                                                    (line 
+                                                                        (expression 
+                                                                            (prefix ++) 
+                                                                            (expression ))))) 
+                                                                (statement if 
+                                                                    (expression 
+                                                                        (atomic ( 
+                                                                            (expression 
+                                                                                (expression 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label inputs)))) 
+                                                                                        (expression 
+                                                                                            (atomic [ ]))) 
+                                                                                    (expression 
+                                                                                        (atomic 
+                                                                                            (value 
+                                                                                                (label isnt))))) 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label FILE))))) ))) 
+                                                                    (scope 
+                                                                        (block 
+                                                                            (statement continue)) ...) else 
+                                                                    (scope 
+                                                                        (block 
+                                                                            (statement 
+                                                                                (line 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label files_input)))) 
+                                                                                        (infix =) 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label true)))))))) ...)) 
+                                                                (statement 
+                                                                    (line 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (label in . open)))) 
+                                                                            (expression 
+                                                                                (atomic ( 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (expression 
+                                                                                                (atomic 
+                                                                                                    (value 
+                                                                                                        (label argv)))) 
+                                                                                            (expression 
+                                                                                                (atomic [ ]))) , 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label std . ios_base . in))))) )))) ;)) 
+                                                                (statement if 
+                                                                    (expression 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (atomic ( 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (expression 
+                                                                                                (expression 
+                                                                                                    (atomic 
+                                                                                                        (value 
+                                                                                                            (label no)))) 
+                                                                                                (expression 
+                                                                                                    (expression 
+                                                                                                        (atomic 
+                                                                                                            (value 
+                                                                                                                (label in)))) 
+                                                                                                    (infix or) 
+                                                                                                    (expression 
+                                                                                                        (atomic 
+                                                                                                            (value 
+                                                                                                                (label not)))))) 
+                                                                                            (expression 
+                                                                                                (atomic 
+                                                                                                    (value 
+                                                                                                        (label in . is_open))))) 
+                                                                                        (expression 
+                                                                                            (atomic ( )))) ))) 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (label fprintf))))) 
+                                                                        (expression 
+                                                                            (atomic ( 
+                                                                                (expression 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label stderr)))) , 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (literal "File couldn't open (%s)\n"))))) , 
+                                                                                    (expression 
+                                                                                        (expression 
+                                                                                            (atomic 
+                                                                                                (value 
+                                                                                                    (label argv)))) 
+                                                                                        (expression 
+                                                                                            (atomic [ ])))) )))) 
+                                                                    (scope 
+                                                                        (block 
+                                                                            (statement 
+                                                                                (line ;)) 
+                                                                            (statement return 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (literal 1)))) ;)) ...)) 
+                                                                (statement 
+                                                                    (line 
+                                                                        (expression 
+                                                                            (expression 
+                                                                                (atomic 
+                                                                                    (value 
+                                                                                        (label test)))) 
+                                                                            (expression 
+                                                                                (atomic ( )))) ;))) ...))) ...)) 
+                                        (statement if 
+                                            (expression 
+                                                (atomic ( 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label zero)))) 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label files_input))))) ))) 
+                                            (scope 
+                                                (braced_scope { 
+                                                    (block 
+                                                        (statement 
+                                                            (line 
+                                                                (expression 
+                                                                    (expression 
+                                                                        (atomic 
+                                                                            (value 
+                                                                                (label printf)))) 
+                                                                    (expression 
+                                                                        (atomic ( 
+                                                                            (expression 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (label PROGRAM_NAME)))) 
+                                                                                (expression 
+                                                                                    (atomic 
+                                                                                        (value 
+                                                                                            (literal " - Reading from standard input\n"))))) )))) ;)) 
+                                                        (statement return 
+                                                            (expression 
+                                                                (expression 
+                                                                    (atomic 
+                                                                        (value 
+                                                                            (label test)))) 
+                                                                (expression 
+                                                                    (atomic ( )))) ;)) }))) 
+                                        (statement return 
+                                            (expression 
+                                                (atomic 
+                                                    (value 
+                                                        (literal 0)))) ;)) ...)) 
+                            (statement 
+                                (line 
+                                    (variables 
+                                        (type 
+                                            (datatype 
+                                                (label antlr4 . ANTLRInputStream))) 
+                                        (instances 
+                                            (instance 
+                                                (label antlrInput)))))) 
+                            (statement 
+                                (line 
+                                    (variables 
+                                        (type 
+                                            (datatype 
+                                                (tuple ( )))) 
+                                        (instances 
+                                            (instance 
+                                                (label using)))))) 
+                            (statement 
+                                (line 
+                                    (variables 
+                                        (type 
+                                            (datatype 
+                                                (label namespace))) 
+                                        (instances 
+                                            (instance 
+                                                (label antlr4)))) ;)) 
+                            (statement 
+                                (line 
+                                    (variables 
+                                        (type 
+                                            (datatype 
+                                                (label ANTLRInputStream))) 
+                                        (instances 
+                                            (instance 
+                                                (label input)))) ;)) 
+                            (statement 
+                                (line 
+                                    (expression 
+                                        (expression 
+                                            (atomic 
+                                                (value 
+                                                    (label printf)))) 
+                                        (expression 
+                                            (atomic ( 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (literal "Okay...\n")))) )))) ;)) 
+                            (statement if 
+                                (expression 
+                                    (expression 
+                                        (expression 
+                                            (expression 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (label in . is_open)))) 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (label printf))))) 
+                                            (expression 
+                                                (atomic ( 
+                                                    (expression 
+                                                        (atomic 
+                                                            (value 
+                                                                (literal "Opened input file.\n")))) )))) , 
+                                        (expression 
+                                            (expression 
+                                                (atomic 
+                                                    (value 
+                                                        (label input . load)))) 
+                                            (expression 
+                                                (atomic ( 
+                                                    (expression 
+                                                        (atomic 
+                                                            (value 
+                                                                (label in)))) ))))) , 
+                                    (expression 
+                                        (expression 
+                                            (atomic 
+                                                (value 
+                                                    (label printf)))) 
+                                        (expression 
+                                            (atomic ( 
+                                                (expression 
+                                                    (atomic 
+                                                        (value 
+                                                            (literal "Opened ANTLR input stream.\n")))) ))))) 
+                                (scope block ...) else 
+                                (scope 
+                                    (block 
+                                        (statement 
+                                            (line 
+                                                (expression 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label printf)))) 
+                                                        (expression 
+                                                            (atomic ( 
+                                                                (expression 
+                                                                    (atomic 
+                                                                        (value 
+                                                                            (literal "Defaulting to stdin for input,,,\n")))) )))) , 
+                                                    (expression 
+                                                        (expression 
+                                                            (atomic 
+                                                                (value 
+                                                                    (label input . load)))) 
+                                                        (expression 
+                                                            (atomic ( 
+                                                                (expression 
+                                                                    (atomic 
+                                                                        (value 
+                                                                            (label std . cin)))) )))))))) ...)) 
+                            (statement return 
+                                (expression 
+                                    (atomic 
+                                        (value 
+                                            (label input)))) ;)) ...)))) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (builtin int))) 
+                    (instances 
+                        (instance 
+                            (label test_scanner)))))) 
+        (statement 
+            (line 
+                (expression 
+                    (atomic ( ))))) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (builtin int))) 
+                    (instances 
+                        (instance 
+                            (label result)))) ;)) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (label using))) 
+                    (instances 
+                        (instance 
+                            (label namespace)))))) 
+        (statement 
+            (line 
+                (expression 
+                    (atomic 
+                        (value 
+                            (label antlr4)))) ;)) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (label ANTLRInputStream))) 
+                    (instances 
+                        (instance 
+                            (label input) 
+                            (initializer = 
+                                (expression 
+                                    (expression 
+                                        (atomic 
+                                            (value 
+                                                (label antlrInput)))) 
+                                    (expression 
+                                        (atomic ( )))))))) ;)) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (label catLexer))) 
+                    (instances 
+                        (instance 
+                            (label lexer)))))) 
+        (statement 
+            (line 
+                (expression 
+                    (atomic ( 
+                        (expression 
+                            (prefix &) 
+                            (expression 
+                                (atomic 
+                                    (value 
+                                        (label input))))) ))) ;)) 
+        (statement 
+            (line 
+                (variables 
+                    (type 
+                        (datatype 
+                            (label CommonTokenStream))) 
+                    (instances 
+                        (instance 
+                            (label tokens)))))) 
+        (statement 
+            (line 
+                (expression 
+                    (atomic ( 
+                        (expression 
+                            (prefix &) 
+                            (expression 
+                                (atomic 
+                                    (value 
+                                        (label lexer))))) ))) ;)) 
+        (statement 
+            (line 
+                (expression 
+                    (expression 
+                        (atomic 
+                            (value 
+                                (label tokens . fill)))) 
+                    (expression 
+                        (atomic ( )))) ;)) 
+        (statement for iterator 
+            (scope 
+                (block 
+                    (statement 
+                        (line ()) 
+                    (statement 
+                        (line 
+                            (variables 
+                                (type 
+                                    (datatype 
+                                        (label auto))) 
+                                (instances 
+                                    (instance 
+                                        (label token))))))) :)) 
+        (statement 
+            (line 
+                (expression 
+                    (expression 
+                        (atomic 
+                            (value 
+                                (label tokens . getTokens)))) 
+                    (expression 
+                        (atomic ( )))))))

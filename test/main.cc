@@ -1,16 +1,6 @@
-#include <stdio.h>
-#include <string.h>
-#include <iostream>
 
-#include <antlr4-runtime/antlr4-runtime.h>
-#include "catLexer.h"
-#include "catParser.h"
-#include "catListener.h"
 
-#include "cext/optional.hh"
-#include "cext/ints.hh"
 
-#define PROGRAM_NAME "autocatc"
 
 int test_scanner ();
 int test_parser ();
@@ -111,6 +101,7 @@ int test_scanner()
 	{
 		printf ("%s\n", token->getText().c_str());
 	}
+	
 	
 	return result;
 }

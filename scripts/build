@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# leave unmatched wildcards empty
+shopt -s nullglob
+
+mkdir -p gen
+cd gen
+
+SRC="../src"
+
+
+clang -x c -E -P $SRC/cat.g4 > ./cat.g4 -Wno-invalid-pp-token
+antlr4 cat.g4
+
+ln -s /usr/include/antlr4-runtime .
+
+cd ..
+
+CLANG_FLAGS="\
+-Wno-deprecated -Wno-unneeded-internal-declaration \
+-fno-caret-diagnostics -ferror-limit=999 \
+-std=c++17 \
+-g3 \
+"
+
+GCC_FLAGS="\
+-Wno-deprecated -Wno-attributes \
+-fno-diagnostics-show-caret \
+-fdiagnostics-urls=never \
+-fdiagnostics-path-format=inline-events \
+-std=c++17 \
+-g3 \
+"
+
+mkdir -p bin
+cd bin
+
+INCLUDES="\
+-I ../src -I ../gen \
+-I ../generated/antlr4-runtime \
+"
+
+unbuffer \
+g++ -c $GCC_FLAGS $INCLUDES \
+	../gen/*.cpp \
+	2>&1 \
+	| grep -v 'In file included' \
+	| grep -v 'from'
+
+unbuffer \
+g++ -c $GCC_FLAGS $INCLUDES \
+	../src/*.cc \
+	2>&1 \
+	| grep -v 'In file included' \
+	| grep -v 'from'
+
+echo "Compiled object files."
+
+unbuffer \
+g++ $GCC_FLAGS --static \
+	*.o -o ../autocatc \
+	-lantlr4-runtime
+
+cd ..
+
+rm -r bin
