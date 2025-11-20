@@ -4,18 +4,15 @@
 #include "ints.hh"
 
 template <typename T>
-struct Opt
+struct Opt: T
 {
-	T value;
 	byte valid;
 	
 	Opt () = default;
-	Opt (T Value) { value = Value, valid = true; }
+	Opt (T Value) { *this = Value; valid = true; }
 	
-	bool operator ! () const
-	{ return not valid; }
-	
-	operator T () const { return value; }
+	operator bool () const
+	{ return valid; }
 };
 
 #endif

@@ -2,17 +2,17 @@
 
 namespace CatLang {
 
-Symbol* Scope::find (Label path)
+Symbol* find (Name path, Scope)
 {
 	// search this scope recursively
 }
 
-Symbol* Scope::lookup (Label path)
+Symbol* lookup (Name path, Scope)
 {
 	// find anywhere in the symbol table
 }
 
-fast Scope::insert (Symbol* symbol)
+fast insert (Symbol* symbol, Scope)
 {
 	// TODO
 }

@@ -141,9 +141,9 @@ range_expression: expression '..' expression ...
 
 pointer:
 
-	'~' <'const'> // cat-style pointer
-|	'*' <'const'> // c-style pointer
-|	'!' <'const'> // c++ reference-style pointer (const keyword is extraneous, it will always be const)
+	'^' <'const'> // owning pointer (reference)
+|	'~' <'const'> // non-owning pointer (link)
+|	'*' <'const'> // star pointer (user-managed memory)
 ...
 
 builtin:

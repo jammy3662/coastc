@@ -16,7 +16,7 @@ int main (int argc, char** argv)
 	enum Arg {FILE, FLAG};
 	Arg inputs [argc];
 	
-	for (int i = 0; i < argc; ++i):
+	for (int i = 0; i < argc; ++i)...
 	
 		if (zero strcmp (argv[i], "--help"))
 		
@@ -50,7 +50,7 @@ int main (int argc, char** argv)
 			in.open (argv[i], std.ios_base.in);
 			
 			if (no in or not in.is_open())
-			
+			...
 				fprintf (stderr, "File couldn't open (%s)\n", argv[i]);
 				return 1;
 			...
